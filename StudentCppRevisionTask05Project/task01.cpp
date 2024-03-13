@@ -35,5 +35,12 @@
 */
 
 int task01(int hour1, int minute1, int second1, int hour2, int minute2, int second2) {
+	if (hour1 < 0 || hour2 < 0 || minute1 < 0 || minute2 < 0 || second1 < 0 || second2 < 0 || hour1 > 23 || hour2 > 23 || minute1 > 59 || minute2 > 59 || second1 > 59 || second2 > 59) {
+		return -1;
+	}
 
+	int total_secondsecond1 = hour1 * 3600 + minute1 * 60 + second1;
+	int total_secondsecond2 = hour2 * 3600 + minute2 * 60 + second2;
+
+	return abs(total_secondsecond2 - total_secondsecond1);
 }
